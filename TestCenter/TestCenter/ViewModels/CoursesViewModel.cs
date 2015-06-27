@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using TestCenter.Models;
 using TestCenter.Services;
 using System.Linq;
 using System.Windows.Input;
+using TestCenter.Model;
 
 namespace TestCenter.ViewModels
 {
     public class CoursesViewModel : ViewModelBase
     {
-        private readonly ICourseService Service;
-        private readonly Func<Course, CourseViewModel> CourseViewModelFactory;
+        private readonly CoursesService Service;
+        private readonly Func<Course, CourseViewModel> _courseViewModelFactory;
         public new string Title
         {
             get
@@ -19,14 +19,15 @@ namespace TestCenter.ViewModels
             }
             set { }
         }
+
         public IEnumerable<CourseViewModel> Courses { get; set; }
         public ICommand ShowCourseDetailsCommand { get; set; }
-        public CoursesViewModel(ICourseService service, Func<Course, CourseViewModel> courseViewModelFactory)
+        public CoursesViewModel(CoursesService service, Func<Course, CourseViewModel> courseViewModelFactory)
         {
             Service = service;
-            CourseViewModelFactory = courseViewModelFactory;
+            _courseViewModelFactory = courseViewModelFactory;
 
-            Courses = Service.GetAllCourses().Select(c => CourseViewModelFactory(c));
+            Courses = Service.GetAllCourses().Select(c => _courseViewModelFactory(c));
         }
     }
 }

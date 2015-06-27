@@ -1,29 +1,29 @@
-﻿using TestCenter.Models;
+﻿using TestCenter.Model;
 using TestCenter.Services;
 
 namespace TestCenter.ViewModels
 {
     public class CourseViewModel : ViewModelBase
     {
-        private ICourseService Service;
+        private CoursesService Service;
         public new string Title
         {
             get
             {
                 return "Course Details";
             }
-            set{ }
+            //set{ }
         }
         public string Name { get; set; }
         public string Description { get; set; }
         //public CourseViewModel() { }
-        public CourseViewModel(Course course, ICourseService service)
+        public CourseViewModel(Course course, CoursesService service)
         {
             //Service
             Service = service;
             //Entity
             Name = course.Name;
-            Description = course.Description;
+            Description = course.Detail;
         }
     }
 }

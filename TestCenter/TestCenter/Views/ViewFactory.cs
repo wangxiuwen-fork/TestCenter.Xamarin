@@ -6,12 +6,12 @@ using Xamarin.Forms;
 
 namespace TestCenter.Views
 {
-    public class ViewFactory : IViewFactory
+    public class TestCenterViewFactory : ViewFactory
     {
         private readonly IDictionary<Type, Type> _map = new Dictionary<Type, Type>();
         private readonly IComponentContext _componentContext;
 
-        public ViewFactory(IComponentContext componentContext)
+        public TestCenterViewFactory(IComponentContext componentContext)
         {
             _componentContext = componentContext;
         }

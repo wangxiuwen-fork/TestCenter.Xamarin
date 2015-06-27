@@ -4,7 +4,7 @@ using Xamarin.Forms;
 
 namespace TestCenter.Views
 {
-    public interface IViewFactory
+    public interface ViewFactory
     {
         void Register<TViewModel, TView>()
             where TViewModel : class, IViewModel

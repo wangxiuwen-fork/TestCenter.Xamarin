@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using TestCenter.FakeServices;
 using TestCenter.Services;
 using TestCenter.ViewModels;
 using TestCenter.Views;
@@ -12,7 +13,7 @@ namespace TestCenter
             base.Load(builder);
 
             //Services
-            builder.RegisterType<CourseService>().As<ICourseService>().SingleInstance();
+            builder.RegisterType<FakeCoursesService>().As<CoursesService>().SingleInstance();
 
             //ViewModel
             builder.RegisterType<CourseViewModel>();

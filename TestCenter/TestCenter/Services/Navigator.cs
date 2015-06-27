@@ -9,9 +9,9 @@ namespace TestCenter.Services
     public class Navigator : INavigator
     {
         private readonly Lazy<INavigation> _navigation;
-        private readonly IViewFactory _viewFactory;
+        private readonly ViewFactory _viewFactory;
 
-        public Navigator(Lazy<INavigation> navigation, IViewFactory viewFactory)
+        public Navigator(Lazy<INavigation> navigation, ViewFactory viewFactory)
         {
             _navigation = navigation;
             _viewFactory = viewFactory;

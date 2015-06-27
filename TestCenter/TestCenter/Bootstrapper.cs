@@ -8,11 +8,11 @@ namespace TestCenter
 {
     public class Bootstrapper : AutofacBootstrapper
     {
-        private readonly App _application;
+        private readonly App TestCenterApp;
 
         public Bootstrapper(App application)
         {
-            _application = application;
+            TestCenterApp = application;
         }
 
         protected override void ConfigureContainer(ContainerBuilder builder)
@@ -21,7 +21,7 @@ namespace TestCenter
             builder.RegisterModule<TestCenterModule>();
         }
 
-        protected override void RegisterViews(IViewFactory viewFactory)
+        protected override void RegisterViews(ViewFactory viewFactory)
         {
             viewFactory.Register<CoursesViewModel, CoursesView>();
             viewFactory.Register<CourseViewModel, CourseDetailsView>();
@@ -29,12 +29,8 @@ namespace TestCenter
 
         protected override void ConfigureApplication(IContainer container)
         {
-            // set main page
-            var viewFactory = container.Resolve<IViewFactory>();
-            var mainPage = viewFactory.Resolve<CoursesViewModel>();
-            var navigationPage = new NavigationPage(mainPage);
-
-            _application.MainPage = navigationPage;
+            var viewFactory = container.Resolve<ViewFactory>();
+            TestCenterApp.MainPage = viewFactory.Resolve<CoursesViewModel>();
         }
     }
 }

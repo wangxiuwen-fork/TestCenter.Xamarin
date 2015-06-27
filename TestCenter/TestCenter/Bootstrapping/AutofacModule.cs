@@ -10,10 +10,11 @@ namespace TestCenter.Bootstrapping
         protected override void Load(ContainerBuilder builder)
         {
             // service registration
-            builder.RegisterType<ViewFactory>()
-                .As<IViewFactory>()
+#if DEBUG
+            builder.RegisterType<TestCenterViewFactory>()
+                .As<ViewFactory>()
                 .SingleInstance();
-
+#endif
             builder.RegisterType<Navigator>()
                 .As<INavigator>()
                 .SingleInstance();

@@ -1,4 +1,4 @@
-﻿namespace TestCenter.Models
+﻿namespace TestCenter.Model
 {
     public class Course : EntityBase
     {
