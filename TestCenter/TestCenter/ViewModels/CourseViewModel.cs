@@ -8,7 +8,7 @@ namespace TestCenter.ViewModels
     public class CourseViewModel : ViewModelBase
     {
         private readonly CoursesService Service;
-        private readonly Navigator Navigation;
+        private readonly Navigator AppNavigator;
         public new string Title
         {
             get
@@ -26,13 +26,14 @@ namespace TestCenter.ViewModels
 
         public CourseViewModel(Course course, CoursesService service, Navigator navigator)
         {
-            //Service
             Service = service;
-            Navigation = navigator;
-            //Entity
+
+            AppNavigator = navigator;
+
             Id = course.Id;
             Name = course.Name;
             Detail = course.Detail;
+
             ShowCourseDetail = new Command(Details);
         }
 
@@ -40,7 +41,8 @@ namespace TestCenter.ViewModels
         {
             Course course = Service.GetById(Id);
 
-            Navigation.PushAsync<CourseViewModel>(viewModel => {
+            AppNavigator.PushAsync<CourseViewModel>(viewModel => {
+                viewModel.Id = Id;
                 viewModel.Name = Name;
                 viewModel.Detail = Detail;
             });
