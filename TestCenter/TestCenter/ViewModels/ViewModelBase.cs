@@ -5,13 +5,13 @@ using System.Runtime.CompilerServices;
 
 namespace TestCenter.ViewModels
 {
-    public class ViewModelBase : IViewModel
+    public class ViewModelBase : ViewModel
     {
         public virtual string Title { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
         
-        public void SetState<TViewModel>(Action<TViewModel> setStateAction) where TViewModel : class, IViewModel
+        public void SetState<TViewModel>(Action<TViewModel> setStateAction) where TViewModel : class, ViewModel
         {
             setStateAction(this as TViewModel);
         }

@@ -30,7 +30,9 @@ namespace TestCenter
         protected override void ConfigureApplication(IContainer container)
         {
             var viewFactory = container.Resolve<ViewFactory>();
-            TestCenterApp.MainPage = viewFactory.Resolve<CoursesViewModel>();
+            var mainPage = viewFactory.Resolve<CoursesViewModel>();
+
+            TestCenterApp.MainPage = new NavigationPage(mainPage);
         }
     }
 }

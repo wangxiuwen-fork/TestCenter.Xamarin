@@ -1,0 +1,10 @@
+{
+  "AppSettings": {
+    "SiteTitle": "TestCenter.Web"
+  },
+  "Data": {
+    "DefaultConnection": {
+      "ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=aspnet5-TestCenter.Web-4b7dee89-3aea-4be9-87fe-337023340a13;Trusted_Connection=True;MultipleActiveResultSets=true"
+    }
+  }
+}

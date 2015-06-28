@@ -9,17 +9,14 @@ namespace TestCenter.Bootstrapping
     {
         protected override void Load(ContainerBuilder builder)
         {
-            // service registration
-#if DEBUG
             builder.RegisterType<TestCenterViewFactory>()
                 .As<ViewFactory>()
                 .SingleInstance();
-#endif
-            builder.RegisterType<Navigator>()
-                .As<INavigator>()
+
+            builder.RegisterType<AppNavigator>()
+                .As<Navigator>()
                 .SingleInstance();
 
-            // navigation registration
             builder.Register<INavigation>(context => App.Current.MainPage.Navigation)
                 .SingleInstance();
         }
