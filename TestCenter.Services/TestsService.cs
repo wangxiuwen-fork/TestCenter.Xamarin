@@ -9,6 +9,6 @@ namespace TestCenter.Services
 {
     public interface TestsService
     {
-        IEnumerable<Test> GetTestsByCourse(int courseId);
+        IEnumerable<Test> GetAllTests();
     }
 }

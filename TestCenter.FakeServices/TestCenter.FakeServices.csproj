@@ -53,6 +53,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TestCenter.Data\TestCenter.Data.csproj">
+      <Project>{ce7b29d8-7d59-4576-b3fd-cc9080bc45c2}</Project>
+      <Name>TestCenter.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestCenter.FakeData\TestCenter.FakeData.csproj">
+      <Project>{4575a220-d469-4369-836f-c8b22682aa22}</Project>
+      <Name>TestCenter.FakeData</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TestCenter.Model\TestCenter.Model.csproj">
       <Project>{16f57b3c-848c-4bf8-8619-01561455ae35}</Project>
       <Name>TestCenter.Model</Name>

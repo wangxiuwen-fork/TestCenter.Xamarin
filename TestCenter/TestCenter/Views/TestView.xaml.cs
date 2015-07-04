@@ -7,7 +7,7 @@ namespace TestCenter
 {
 	public partial class TestView : ContentPage
 	{
-		public TestView (TestViewModel viewModel)
+		public TestView (CourseDetailViewModel viewModel)
 		{
 			InitializeComponent ();
 

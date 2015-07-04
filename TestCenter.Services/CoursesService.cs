@@ -9,7 +9,7 @@ namespace TestCenter.Services
 {
     public interface CoursesService
     {
-        IEnumerable<Course> GetAllCourses();
+        IEnumerable<Course> GetAll();
         Course GetById(int courseId);
     }
 }

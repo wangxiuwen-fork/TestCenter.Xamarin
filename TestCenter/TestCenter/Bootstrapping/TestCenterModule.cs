@@ -19,7 +19,7 @@ namespace TestCenter
             //ViewModel
             builder.RegisterType<CourseViewModel>();
             builder.RegisterType<CoursesViewModel>().SingleInstance();
-            builder.RegisterType<TestViewModel>();
+            //builder.RegisterType<TestViewModel>();
 
             //Views
             builder.RegisterType<CoursesView>().SingleInstance();

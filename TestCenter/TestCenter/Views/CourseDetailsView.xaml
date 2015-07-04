@@ -4,5 +4,5 @@
              x:Class="TestCenter.Views.CourseDetailsView"
              Title="{Binding Title}">
 	<Label Text="{Binding Name}" VerticalOptions="Center" HorizontalOptions="Center" />
-  <Label Text="{Binding Description}" VerticalOptions="Center" HorizontalOptions="Center" />
+  <Label Text="{Binding Detail}" VerticalOptions="Center" HorizontalOptions="Center" />
 </ContentPage>

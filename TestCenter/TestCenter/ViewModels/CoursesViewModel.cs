@@ -10,7 +10,7 @@ namespace TestCenter.ViewModels
     public class CoursesViewModel : ViewModelBase
     {
         private readonly CoursesService Service;
-        private readonly Func<Course, CourseViewModel> _courseViewModelFactory;
+        private readonly Func<Course, CourseViewModel> CourseViewModelFactory;
         public new string Title
         {
             get
@@ -25,9 +25,9 @@ namespace TestCenter.ViewModels
         public CoursesViewModel(CoursesService service, Func<Course, CourseViewModel> courseViewModelFactory)
         {
             Service = service;
-            _courseViewModelFactory = courseViewModelFactory;
+            CourseViewModelFactory = courseViewModelFactory;
 
-            Courses = Service.GetAllCourses().Select(c => _courseViewModelFactory(c));
+            Courses = Service.GetAll().Select(c => CourseViewModelFactory(c));
         }
     }
 }

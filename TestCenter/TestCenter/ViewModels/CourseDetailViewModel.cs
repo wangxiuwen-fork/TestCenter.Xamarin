@@ -6,14 +6,17 @@ using System.Threading.Tasks;
 
 namespace TestCenter.ViewModels
 {
-    public class TestViewModel : ViewModelBase
+    public class CourseDetailViewModel : ViewModelBase
     {
         public new string Title
         {
             get
             {
-                return "Test Details";
+                return "Course Details";
             }
         }
+
+        public string Name { get; set; }
+        public string Detail { get; set; }
     }
 }
