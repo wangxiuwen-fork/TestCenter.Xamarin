@@ -9,6 +9,7 @@ namespace TestCenter.ViewModels
     {
         private readonly CoursesService Service;
         private readonly Navigator AppNavigator;
+
         public new string Title
         {
             get
@@ -17,7 +18,6 @@ namespace TestCenter.ViewModels
             }
             set{ }
         }
-
         public int Id { get; set; }
         public string Name { get; set; }
         public string Detail { get; set; }
