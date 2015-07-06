@@ -88,6 +88,14 @@
       <Project>{67F9D3A8-F71E-4428-913F-C37AE82CDB24}</Project>
       <Name>TestCenter.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\TestCenter.Data\TestCenter.Data.csproj">
+      <Project>{ce7b29d8-7d59-4576-b3fd-cc9080bc45c2}</Project>
+      <Name>TestCenter.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TestCenter.FakeData\TestCenter.FakeData.csproj">
+      <Project>{4575a220-d469-4369-836f-c8b22682aa22}</Project>
+      <Name>TestCenter.FakeData</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\TestCenter.FakeServices\TestCenter.FakeServices.csproj">
       <Project>{70BB04F3-7A76-44F7-8167-4749515614B1}</Project>
       <Name>TestCenter.FakeServices</Name>

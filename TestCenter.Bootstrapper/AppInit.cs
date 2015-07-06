@@ -1,34 +1,28 @@
 ﻿using Autofac;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using TestCenter.Data;
 using TestCenter.FakeData;
 using TestCenter.FakeServices;
 using TestCenter.Services;
-using TestCenter.ViewModels;
-using TestCenter.Views;
 
-namespace TestCenter
+namespace TestCenter.Bootstrapper
 {
-    public class TestCenterModule : Module
+    public class AppInitModule : Module
     {
         protected override void Load(ContainerBuilder builder)
         {
             base.Load(builder);
 
-            //Data Services
+            //Data Layer
             builder.RegisterType<FakeCoursesDataService>().As<CoursesDataService>().SingleInstance();
 
-            //Services
+            //Services Layer
             builder.RegisterType<FakeCoursesService>().As<CoursesService>().SingleInstance();
             builder.RegisterType<FakeTestsService>().As<TestsService>().SingleInstance();
-
-            //ViewModel
-            builder.RegisterType<CourseViewModel>();
-            builder.RegisterType<CoursesViewModel>().SingleInstance();
-
-            //Views
-            builder.RegisterType<CoursesView>().SingleInstance();
-            builder.RegisterType<CourseDetailsView>().SingleInstance();
-            //builder.RegisterType<TestView>().SingleInstance();
         }
     }
 }
