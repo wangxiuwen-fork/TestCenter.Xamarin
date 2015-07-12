@@ -1,9 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TestCenter.Model;
 using TestCenter.Data;
 
@@ -31,7 +27,9 @@ namespace TestCenter.Services.UnitTest
         [TestMethod]
         public void GetCourseById()
         {
-            var course = CoursesService.GetById(1);
+            var courseId = 1;
+            var course = CoursesService.GetById(courseId);
+            Assert.AreEqual(courseId, course.Id);
         }
     }
 }

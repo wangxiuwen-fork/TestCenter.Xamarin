@@ -1,21 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using TestCenter.Services;
 
 namespace TestCenter.ViewModels
 {
-    public class CourseDetailViewModel : ViewModelBase
+    public class CourseDetailsViewModel : ViewModelBase
     {
         public new string Title
         {
             get
             {
-                return "Course Details";
+                return Name;
             }
         }
 
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Detail { get; set; }
     }

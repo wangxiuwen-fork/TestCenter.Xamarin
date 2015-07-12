@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using TestCenter.Data;
 using TestCenter.Model;
 using TestCenter.Services;
@@ -11,7 +7,6 @@ namespace TestCenter.FakeServices
 {
     public class FakeCoursesService : CoursesService
     {
-        //private readonly TestsService TestsService;
         private readonly CoursesDataService CoursesDataService;
 
         public FakeCoursesService(CoursesDataService coursesDataService)

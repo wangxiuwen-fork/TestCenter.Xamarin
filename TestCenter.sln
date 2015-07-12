@@ -22,7 +22,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCenter.WinPhone", "Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCenter.Core", "TestCenter.Core\TestCenter.Core.csproj", "{67F9D3A8-F71E-4428-913F-C37AE82CDB24}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestCenter.Mobile.Common", "TestCenter.Mobile.Common", "{BEBA5BEB-A160-4642-A8BB-B3D8ADF46826}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestCenter", "TestCenter", "{BEBA5BEB-A160-4642-A8BB-B3D8ADF46826}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestCenter.Mobile.Platforms", "TestCenter.Mobile.Platforms", "{7F7AE4FE-46A8-49BB-82F7-FE416A321C94}"
 EndProject

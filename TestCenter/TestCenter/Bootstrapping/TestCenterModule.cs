@@ -23,12 +23,12 @@ namespace TestCenter
 
             //ViewModel
             builder.RegisterType<CourseViewModel>();
+            builder.RegisterType<CourseDetailsViewModel>();
             builder.RegisterType<CoursesViewModel>().SingleInstance();
 
             //Views
             builder.RegisterType<CoursesView>().SingleInstance();
             builder.RegisterType<CourseDetailsView>().SingleInstance();
-            //builder.RegisterType<TestView>().SingleInstance();
         }
     }
 }

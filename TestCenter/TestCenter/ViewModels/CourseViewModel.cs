@@ -22,28 +22,32 @@ namespace TestCenter.ViewModels
         public string Name { get; set; }
         public string Detail { get; set; }
 
-        public ICommand ShowCourseDetail { get; set; }
+        public ICommand ShowCourseDetailCommand { get; set; }
 
         public CourseViewModel(Course course, CoursesService service, Navigator navigator)
         {
             Service = service;
-
             AppNavigator = navigator;
 
+            InitializeViewModelFromModel(course);
+
+            ShowCourseDetailCommand = new Command(ShowCourseDetails);
+        }
+
+        private void InitializeViewModelFromModel(Course course)
+        {
             Id = course.Id;
             Name = course.Name;
             Detail = course.Detail;
-
-            ShowCourseDetail = new Command(Details);
         }
 
-        private void Details()
+        private void ShowCourseDetails()
         {
-            Course course = Service.GetById(Id);
+            var course = Service.GetById(Id);
 
-            AppNavigator.PushAsync<CourseDetailViewModel>(viewModel =>
+            AppNavigator.PushAsync<CourseDetailsViewModel>(viewModel =>
             {
-                //viewModel.Id = Id;
+                viewModel.Id = Id;
                 viewModel.Name = Name;
                 viewModel.Detail = Detail;
             });
