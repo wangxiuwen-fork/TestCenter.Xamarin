@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
@@ -36,17 +36,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="FakeCoursesService.cs" />
+    <Compile Include="FakePublisherService.cs" />
     <Compile Include="FakeTestsService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Xamarin.Forms.Core, Version=1.3.3.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.Forms.Core, Version=1.3.3.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\Xamarin.Forms.1.3.3.6323\lib\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.Forms.Xaml, Version=1.3.3.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.Forms.Xaml, Version=1.3.3.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\Xamarin.Forms.1.3.3.6323\lib\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
-      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -54,19 +53,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TestCenter.Data\TestCenter.Data.csproj">
-      <Project>{ce7b29d8-7d59-4576-b3fd-cc9080bc45c2}</Project>
+      <Project>{CE7B29D8-7D59-4576-B3FD-CC9080BC45C2}</Project>
       <Name>TestCenter.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\TestCenter.FakeData\TestCenter.FakeData.csproj">
-      <Project>{4575a220-d469-4369-836f-c8b22682aa22}</Project>
+      <Project>{4575A220-D469-4369-836F-C8B22682AA22}</Project>
       <Name>TestCenter.FakeData</Name>
     </ProjectReference>
     <ProjectReference Include="..\TestCenter.Model\TestCenter.Model.csproj">
-      <Project>{16f57b3c-848c-4bf8-8619-01561455ae35}</Project>
+      <Project>{16F57B3C-848C-4BF8-8619-01561455AE35}</Project>
       <Name>TestCenter.Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\TestCenter.Services\TestCenter.Services.csproj">
-      <Project>{9b29f9fc-b3cd-4dbe-a2c6-faab72b32197}</Project>
+      <Project>{9B29F9FC-B3CD-4DBE-A2C6-FAAB72B32197}</Project>
       <Name>TestCenter.Services</Name>
     </ProjectReference>
   </ItemGroup>

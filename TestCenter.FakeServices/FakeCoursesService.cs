@@ -7,7 +7,7 @@ namespace TestCenter.FakeServices
 {
     public class FakeCoursesService : CoursesService
     {
-        private readonly CoursesDataService CoursesDataService;
+        readonly CoursesDataService CoursesDataService;
 
         public FakeCoursesService(CoursesDataService coursesDataService)
         {

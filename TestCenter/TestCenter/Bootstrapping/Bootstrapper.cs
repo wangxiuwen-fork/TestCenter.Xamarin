@@ -8,7 +8,7 @@ namespace TestCenter
 {
     public class Bootstrapper : AutofacBootstrapper
     {
-        private readonly App TestCenterApp;
+        readonly App TestCenterApp;
 
         public Bootstrapper(App application)
         {

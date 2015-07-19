@@ -8,8 +8,8 @@ namespace TestCenter.Views
 {
     public class TestCenterViewFactory : ViewFactory
     {
-        private readonly IDictionary<Type, Type> ViewMap = new Dictionary<Type, Type>();
-        private readonly IComponentContext ComponentContext;
+        readonly IDictionary<Type, Type> ViewMap = new Dictionary<Type, Type>();
+        readonly IComponentContext ComponentContext;
 
         public TestCenterViewFactory(IComponentContext componentContext)
         {

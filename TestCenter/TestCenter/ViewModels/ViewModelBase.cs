@@ -26,7 +26,7 @@ namespace TestCenter.ViewModels
             return true; 
         }
 
-        private void OnPropertyChanged([CallerMemberName]string propertyName = null)
+        void OnPropertyChanged([CallerMemberName]string propertyName = null)
         {
             var eventHandler = PropertyChanged;
             if (eventHandler != null)

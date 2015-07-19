@@ -2,16 +2,14 @@
 using System.Collections.Generic;
 using TestCenter.Services;
 using System.Linq;
-using System.Windows.Input;
 using TestCenter.Model;
-using Xamarin.Forms;
 
 namespace TestCenter.ViewModels
 {
     public class CoursesViewModel : ViewModelBase
     {
-        private readonly CoursesService Service;
-        private readonly Func<Course, CourseViewModel> CourseViewModelFactory;
+        readonly CoursesService Service;
+        readonly Func<Course, CourseViewModel> CourseViewModelFactory;
 
         public new string Title
         {

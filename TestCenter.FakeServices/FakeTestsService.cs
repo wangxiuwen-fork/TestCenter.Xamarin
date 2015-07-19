@@ -1,19 +1,32 @@
-﻿using TestCenter.Services;
+﻿using System;
+using System.Collections.Generic;
+using TestCenter.Model;
+using TestCenter.Services;
 
 namespace TestCenter.FakeServices
 {
     public class FakeTestsService : TestsService
     {
-        //public IEnumerable<Test> GetAllTests()
-        //{
-        //    var randomIdGenerator = new Random();
+        readonly IEnumerable<Test> Tests;
 
-        //    return new List<Test>
-        //    {
-        //        new Test { Id = randomIdGenerator.Next(1000, 9999), CourseId = 1, Name = "Test 01 Name", Detail = "Test 11 Detail" },
-        //        new Test { Id = randomIdGenerator.Next(1000, 9999), CourseId = 2, Name = "Test 02 Name", Detail = "Test 12 Detail" },
-        //        new Test { Id = randomIdGenerator.Next(1000, 9999), CourseId = 2, Name = "Test 03 Name", Detail = "Test 13 Detail" }
-        //    };
-        //}
+        public FakeTestsService()
+        {
+            Tests = new List<Test>
+            {
+                new Test { Id = 1, CourseId = 1, Name = "Test 01 Name", Detail = "Test 11 Detail" },
+                new Test { Id = 2, CourseId = 2, Name = "Test 02 Name", Detail = "Test 12 Detail" },
+                new Test { Id = 3, CourseId = 2, Name = "Test 03 Name", Detail = "Test 13 Detail" }
+            };
+        }
+
+        public IEnumerable<Test> GetAll()
+        {
+            return Tests;
+        }
+
+        public Test GetById(int courseId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

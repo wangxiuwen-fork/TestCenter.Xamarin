@@ -7,8 +7,8 @@ namespace TestCenter.ViewModels
 {
     public class CourseViewModel : ViewModelBase
     {
-        private readonly CoursesService Service;
-        private readonly Navigator AppNavigator;
+        readonly CoursesService Service;
+        readonly Navigator AppNavigator;
 
         public new string Title
         {
@@ -34,14 +34,14 @@ namespace TestCenter.ViewModels
             ShowCourseDetailCommand = new Command(ShowCourseDetails);
         }
 
-        private void InitializeViewModelFromModel(Course course)
+        void InitializeViewModelFromModel(Course course)
         {
             Id = course.Id;
             Name = course.Name;
             Detail = course.Detail;
         }
 
-        private void ShowCourseDetails()
+        void ShowCourseDetails()
         {
             var course = Service.GetById(Id);
 

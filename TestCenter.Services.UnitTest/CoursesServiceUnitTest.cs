@@ -8,8 +8,8 @@ namespace TestCenter.Services.UnitTest
     [TestClass]
     public class CoursesServiceUnitTest
     {
-        private readonly CoursesService CoursesService;
-        private readonly CoursesDataService CoursesDataService;
+        readonly CoursesService CoursesService;
+        readonly CoursesDataService CoursesDataService;
 
         public CoursesServiceUnitTest()
         {

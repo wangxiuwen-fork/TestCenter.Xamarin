@@ -8,8 +8,8 @@ namespace TestCenter.Services
 {
     public class AppNavigator : Navigator
     {
-        private readonly Lazy<INavigation> AppNavigation;
-        private readonly ViewFactory AppViewFactory;
+        readonly Lazy<INavigation> AppNavigation;
+        readonly ViewFactory AppViewFactory;
 
         public AppNavigator(Lazy<INavigation> navigation, ViewFactory viewFactory)
         {
@@ -17,7 +17,7 @@ namespace TestCenter.Services
             AppViewFactory = viewFactory;
         }
 
-        private INavigation Navigation
+        INavigation Navigation
         {
             get { return AppNavigation.Value; }
         }

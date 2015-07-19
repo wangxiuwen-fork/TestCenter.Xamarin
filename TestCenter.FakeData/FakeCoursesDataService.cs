@@ -7,7 +7,7 @@ namespace TestCenter.FakeData
 {
     public class FakeCoursesDataService : CoursesDataService
     {
-        private List<Course> Courses;
+        readonly List<Course> Courses;
         public FakeCoursesDataService()
         {
             Courses = new List<Course>
