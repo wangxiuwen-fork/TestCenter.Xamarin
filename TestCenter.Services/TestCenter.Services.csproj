@@ -36,7 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="CoursesService.cs" />
-    <Compile Include="PublisherService.cs" />
+    <Compile Include="InstituteService.cs" />
     <Compile Include="TestsService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

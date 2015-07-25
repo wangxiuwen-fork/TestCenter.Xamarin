@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using TestCenter.Data;
 using TestCenter.Model;
 using TestCenter.Services;
@@ -22,6 +23,11 @@ namespace TestCenter.FakeServices
         public Course GetById(int courseId)
         {
             return CoursesDataService.GetById(courseId);
+        }
+
+        public IEnumerable<Course> GetByInstitute(int instituteId)
+        {
+            return CoursesDataService.GetByInstitute(instituteId);
         }
     }
 }

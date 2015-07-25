@@ -1,12 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TestCenter.Views.CoursesView"
-             Title="{Binding Title}">
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TestCenter.Views.CoursesView"
+    xmlns:cv="clr-namespace:TestCenter.Views.CustomComponets;assembly=TestCenter"
+    Title="{Binding Title}">
     <ListView ItemsSource="{Binding Courses}">
         <ListView.ItemTemplate>
             <DataTemplate>
-                <TextCell Text="{Binding Name}" Detail="{Binding Detail}" Command="{Binding ShowCourseDetailCommand}"/>
+                <cv:TextCellExtended Text="{Binding Name}" 
+                                     Detail="{Binding Detail}" 
+                                     ShowDisclosure="True" 
+                                     Command="{Binding ShowCourseDetailCommand}"/>
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>

@@ -23,6 +23,7 @@ namespace TestCenter
 
         protected override void RegisterViews(ViewFactory viewFactory)
         {
+            viewFactory.Register<InstitutesViewModel, InstitutesView>();
             viewFactory.Register<CoursesViewModel, CoursesView>();
             viewFactory.Register<CourseDetailsViewModel, CourseDetailsView>();
         }
@@ -30,7 +31,7 @@ namespace TestCenter
         protected override void ConfigureApplication(IContainer container)
         {
             var viewFactory = container.Resolve<ViewFactory>();
-            var mainPage = viewFactory.Resolve<CoursesViewModel>();
+            var mainPage = viewFactory.Resolve<InstitutesViewModel>();
 
             TestCenterApp.MainPage = new NavigationPage(mainPage);
         }

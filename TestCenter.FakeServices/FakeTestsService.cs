@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Linq;
 using TestCenter.Model;
 using TestCenter.Services;
 
@@ -26,7 +26,7 @@ namespace TestCenter.FakeServices
 
         public Test GetById(int courseId)
         {
-            throw new NotImplementedException();
+            return Tests.FirstOrDefault(t => t.CourseId == courseId);
         }
     }
 }

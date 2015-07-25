@@ -9,16 +9,9 @@ namespace TestCenter.ViewModels
     {
         readonly CoursesService Service;
         readonly Navigator AppNavigator;
-
-        public new string Title
-        {
-            get
-            {
-                return "Course Details";
-            }
-            set{ }
-        }
+        
         public int Id { get; set; }
+        public int InstituteId { get; set; }
         public string Name { get; set; }
         public string Detail { get; set; }
 
@@ -30,13 +23,13 @@ namespace TestCenter.ViewModels
             AppNavigator = navigator;
 
             InitializeViewModelFromModel(course);
-
             ShowCourseDetailCommand = new Command(ShowCourseDetails);
         }
 
         void InitializeViewModelFromModel(Course course)
         {
             Id = course.Id;
+            InstituteId = course.InstituteId;
             Name = course.Name;
             Detail = course.Detail;
         }
@@ -48,6 +41,7 @@ namespace TestCenter.ViewModels
             AppNavigator.PushAsync<CourseDetailsViewModel>(viewModel =>
             {
                 viewModel.Id = Id;
+                viewModel.InstituteId = InstituteId;
                 viewModel.Name = Name;
                 viewModel.Detail = Detail;
             });

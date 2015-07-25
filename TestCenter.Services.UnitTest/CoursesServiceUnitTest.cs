@@ -31,5 +31,13 @@ namespace TestCenter.Services.UnitTest
             var course = CoursesService.GetById(courseId);
             Assert.AreEqual(courseId, course.Id);
         }
+
+        [TestMethod]
+        public void GetInstituteCoursesUnitTest()
+        {
+            var instituteId = 1;
+            var courses = CoursesService.GetByInstitute(instituteId);
+            Assert.IsNotNull(courses);
+        }
     }
 }

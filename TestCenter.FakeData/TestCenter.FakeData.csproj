@@ -36,7 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="FakeCoursesDataService.cs" />
-    <Compile Include="FakePublisherDataService.cs" />
+    <Compile Include="FakeInstituteDataService.cs" />
     <Compile Include="FakeTestsDataService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

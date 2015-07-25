@@ -57,7 +57,7 @@
   <ItemGroup>
     <Compile Include="CoursesServiceUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PublisherServiceUnitTest.cs" />
+    <Compile Include="InstituteServiceUnitTest.cs" />
     <Compile Include="TestServicesUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
