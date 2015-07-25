@@ -2,7 +2,7 @@
 
 namespace TestCenter.Data
 {
-    public interface PublisherDataService: RepositoryBase<Publisher>
+    public interface InstituteDataService: RepositoryBase<Institute>
     {
     }
 }

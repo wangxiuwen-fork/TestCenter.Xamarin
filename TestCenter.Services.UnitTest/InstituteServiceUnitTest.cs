@@ -4,19 +4,19 @@ using System.Linq;
 namespace TestCenter.Services.UnitTest
 {
     [TestClass]
-    public class PublisherServiceUnitTest
+    public class InstituteServiceUnitTest
     {
-        readonly PublisherService PublisherService;
+        readonly InstituteService InstituteService;
 
-        public PublisherServiceUnitTest()
+        public InstituteServiceUnitTest()
         {
-            PublisherService = new FakeServices.FakePublisherService();
+            InstituteService = new FakeServices.FakeInstituteService();
         }
 
         [TestMethod]
         public void GetAllPublisherUnitTest()
         {
-            var publishers = PublisherService.GetAllPublishers();
+            var publishers = InstituteService.GetAllPublishers();
             Assert.IsTrue(publishers.Count() > 0);
         }
 
@@ -24,7 +24,7 @@ namespace TestCenter.Services.UnitTest
         public void GetPublisherById()
         {
             var id = 1;
-            var publisher = PublisherService.GetById(id);
+            var publisher = InstituteService.GetById(id);
             Assert.IsNotNull(publisher);
         }
     }
