@@ -1,4 +1,6 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
+using TestCenter.Model;
 
 namespace TestCenter.ViewModels
 {
@@ -16,6 +18,6 @@ namespace TestCenter.ViewModels
         public int InstituteId { get; set; }
         public string Name { get; set; }
         public string Detail { get; set; }
-        public IEnumerable Tests { get; set; }
+        public IEnumerable<TestViewModel> Tests { get; set; }
     }
 }

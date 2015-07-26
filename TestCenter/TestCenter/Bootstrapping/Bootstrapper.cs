@@ -21,10 +21,11 @@ namespace TestCenter
             builder.RegisterModule<TestCenterModule>();
         }
 
-        protected override void RegisterViews(ViewFactory viewFactory)
+        protected override void RegisterViewModelForViews(ViewFactory viewFactory)
         {
             viewFactory.Register<InstitutesViewModel, InstitutesView>();
             viewFactory.Register<CoursesViewModel, CoursesView>();
+            viewFactory.Register<CourseDetailsViewModel, CourseDetailsView>();
             viewFactory.Register<CourseDetailsViewModel, CourseDetailsView>();
         }
 

@@ -9,19 +9,13 @@ namespace TestCenter.ViewModels
 {
     public class CoursesViewModel : ViewModelBase
     {
-        readonly CoursesService Service;
-        readonly Func<Course, CourseViewModel> CourseViewModelFactory;
-
         public int InstituteId { get; set; }
 
         public IEnumerable<CourseViewModel> Courses { get; set; }
 
-        public CoursesViewModel(CoursesService service, Func<Course, CourseViewModel> courseViewModelFactory)
+        public CoursesViewModel()
         {
-            Title = AppResource.Course;
-            Service = service;
-            CourseViewModelFactory = courseViewModelFactory;
-            Courses = Service.GetByInstitute(InstituteId).Select(c => CourseViewModelFactory(c));
+            Title = AppResource.Courses;
         }
     }
 }

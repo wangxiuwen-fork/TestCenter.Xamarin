@@ -14,7 +14,7 @@ namespace TestCenter.Bootstrapping
             var container = builder.Build();
             var viewFactory = container.Resolve<ViewFactory>();
 
-            RegisterViews(viewFactory);
+            RegisterViewModelForViews(viewFactory);
 
             ConfigureApplication(container);
         }
@@ -24,7 +24,7 @@ namespace TestCenter.Bootstrapping
             builder.RegisterModule<AutofacModule>();
         }
 
-        protected abstract void RegisterViews(ViewFactory viewFactory);
+        protected abstract void RegisterViewModelForViews(ViewFactory viewFactory);
 
         protected abstract void ConfigureApplication(IContainer container);
     }

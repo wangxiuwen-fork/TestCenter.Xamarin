@@ -1,4 +1,6 @@
-﻿using System.Windows.Input;
+﻿using System;
+using System.Linq;
+using System.Windows.Input;
 using TestCenter.Model;
 using TestCenter.Services;
 using Xamarin.Forms;
@@ -8,8 +10,10 @@ namespace TestCenter.ViewModels
     public class CourseViewModel : ViewModelBase
     {
         readonly CoursesService Service;
+        readonly TestsService TestsService;
         readonly Navigator AppNavigator;
-        
+        readonly Func<Test, TestViewModel> TestViewModelFactory;
+
         public int Id { get; set; }
         public int InstituteId { get; set; }
         public string Name { get; set; }
@@ -17,13 +21,14 @@ namespace TestCenter.ViewModels
 
         public ICommand ShowCourseDetailCommand { get; set; }
 
-        public CourseViewModel(Course course, CoursesService service, Navigator navigator)
+        public CourseViewModel(Course course, Navigator navigator, CoursesService service, TestsService testsService, Func<Test, TestViewModel> testViewModelFactory)
         {
             Service = service;
+            TestsService = testsService;
             AppNavigator = navigator;
+            TestViewModelFactory = testViewModelFactory;
 
             InitializeViewModelFromModel(course);
-            ShowCourseDetailCommand = new Command(ShowCourseDetails);
         }
 
         void InitializeViewModelFromModel(Course course)
@@ -32,18 +37,18 @@ namespace TestCenter.ViewModels
             InstituteId = course.InstituteId;
             Name = course.Name;
             Detail = course.Detail;
+
+            ShowCourseDetailCommand = new Command(ShowCourseDetails);
         }
 
         void ShowCourseDetails()
         {
-            var course = Service.GetById(Id);
-
-            AppNavigator.PushAsync<CourseDetailsViewModel>(viewModel =>
-            {
+            AppNavigator.PushAsync<CourseDetailsViewModel>(viewModel => {
                 viewModel.Id = Id;
                 viewModel.InstituteId = InstituteId;
                 viewModel.Name = Name;
                 viewModel.Detail = Detail;
+                viewModel.Tests = TestsService.GetAll().Select(t => TestViewModelFactory(t));
             });
         }
     }

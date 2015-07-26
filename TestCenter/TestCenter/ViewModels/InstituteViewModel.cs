@@ -9,7 +9,6 @@ namespace TestCenter.ViewModels
 {
     public class InstituteViewModel : ViewModelBase
     {
-        readonly InstituteService Service;
         readonly CoursesService CoursesService;
         readonly Navigator AppNavigator;
 
@@ -21,14 +20,11 @@ namespace TestCenter.ViewModels
 
         public ICommand ShowCoursesCommand { get; set; }
 
-        public InstituteViewModel(Institute institute, InstituteService service, CoursesService coursesService, Navigator navigator, Func<Course, CourseViewModel> courseViewModelFactory)
+        public InstituteViewModel(Institute institute, CoursesService coursesService, Navigator navigator, Func<Course, CourseViewModel> courseViewModelFactory)
         {
-            Service = service;
             CoursesService = coursesService;
             AppNavigator = navigator;
             CourseViewModelFactory = courseViewModelFactory;
-
-            ShowCoursesCommand = new Command(ShowCourses);
 
             InitializeViewModelFromModel(institute);
         }
@@ -38,11 +34,14 @@ namespace TestCenter.ViewModels
             Id = institute.Id;
             Name = institute.Name;
             Detail = institute.Detail;
+
+            ShowCoursesCommand = new Command(ShowCourses);
         }
 
         void ShowCourses()
         {
             AppNavigator.PushAsync<CoursesViewModel>(viewModel => {
+                viewModel.Title = Name;
                 viewModel.InstituteId = Id;
                 viewModel.Courses = CoursesService.GetByInstitute(Id).Select(c => CourseViewModelFactory(c));
             });
