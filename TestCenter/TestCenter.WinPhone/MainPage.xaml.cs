@@ -1,16 +1,24 @@
-﻿using Microsoft.Phone.Controls;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Navigation;
+using Microsoft.Phone.Controls;
+using Microsoft.Phone.Shell;
 
 namespace TestCenter.WinPhone
 {
-    public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
+	public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage
+	{
+		public MainPage ()
+		{
+			InitializeComponent();
+			SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
 
-            global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new TestCenter.App());
-        }
-    }
+			global::Xamarin.Forms.Forms.Init ();
+			LoadApplication (new TestCenter.App ());
+		}
+	}
 }

@@ -1,0 +1,16 @@
+﻿<Properties StartupItem="TestCenter/TestCenter.iOS/TestCenter.iOS.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone5s.8.4" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="TestCenter/TestCenter/packages.config">
+    <Files>
+      <File FileName="TestCenter/TestCenter/packages.config" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>TestCenter/TestCenter.WinPhone/TestCenter.WinPhone.csproj</String>
+    <String>TestCenter/TestCenter.Droid/TestCenter.Droid.csproj</String>
+  </DisabledProjects>
+</Properties>
