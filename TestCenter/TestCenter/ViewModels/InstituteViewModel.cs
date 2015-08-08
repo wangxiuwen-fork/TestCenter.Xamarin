@@ -40,7 +40,8 @@ namespace TestCenter.ViewModels
 
         void ShowCourses()
         {
-            AppNavigator.PushAsync<CoursesViewModel>(viewModel => {
+            AppNavigator.PushAsync<CoursesViewModel>(viewModel =>
+            {
                 viewModel.Title = Name;
                 viewModel.InstituteId = Id;
                 viewModel.Courses = CoursesService.GetByInstitute(Id).Select(c => CourseViewModelFactory(c));

@@ -1,21 +1,24 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TestCenter.Data;
+using System.Collections.Generic;
+using TestCenter.Model;
 
 namespace TestCenter.Services.UnitTest
 {
     [TestClass]
     public class TestServicesUnitTest
     {
-        readonly TestsDataService TestsDataService;
+        readonly TestsService FakeTestsService;
 
         public TestServicesUnitTest()
         {
-            TestsDataService = new FakeData.FakeTestsDataService();
+            FakeTestsService = new FakeServices.FakeTestsService();
         }
 
         [TestMethod]
         public void GetAllTestByCourseId()
         {
+            var tests = (List<Test>)FakeTestsService.GetByCourse(1);
+            Assert.IsTrue(tests.Count > 0);
         }
     }
 }

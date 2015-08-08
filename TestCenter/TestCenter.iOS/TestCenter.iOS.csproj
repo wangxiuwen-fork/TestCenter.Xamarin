@@ -100,7 +100,7 @@
   <ItemGroup>
     <ProjectReference Include="..\TestCenter\TestCenter.csproj">
       <Name>TestCenter</Name>
-      <Project>{7A9E4603-A200-4421-B5DF-6FA597F04E46}</Project>
+      <Project>{A96D8809-6D6B-4446-A786-86528BAA0CB8}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

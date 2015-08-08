@@ -5,7 +5,10 @@ namespace TestCenter.Services
 {
     public interface TestsService
     {
+        Test GetById(int testId);
+
         IEnumerable<Test> GetAll();
-        Test GetById(int courseId);
+
+        IEnumerable<Test> GetByCourse(int courseId);
     }
 }

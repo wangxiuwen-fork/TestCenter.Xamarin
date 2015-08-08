@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Windows.Input;
 using TestCenter.Localization;
 using TestCenter.Model;
 using TestCenter.Services;
 
 namespace TestCenter.ViewModels
 {
-    public class InstitutesViewModel: ViewModelBase
+    public class InstitutesViewModel : ViewModelBase
     {
         readonly InstituteService Service;
         readonly Func<Institute, InstituteViewModel> InstituteViewModelFactory;

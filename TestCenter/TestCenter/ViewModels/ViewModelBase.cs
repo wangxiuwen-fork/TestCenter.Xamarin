@@ -10,7 +10,7 @@ namespace TestCenter.ViewModels
         public virtual string Title { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
-        
+
         public void SetState<TViewModel>(Action<TViewModel> setStateAction) where TViewModel : class, ViewModel
         {
             setStateAction(this as TViewModel);
@@ -23,7 +23,7 @@ namespace TestCenter.ViewModels
             storage = value;
             OnPropertyChanged(propertyName);
 
-            return true; 
+            return true;
         }
 
         void OnPropertyChanged([CallerMemberName]string propertyName = null)

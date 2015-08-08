@@ -17,7 +17,7 @@ namespace TestCenter.FakeData
                 new Institute { Id = 2, Name = "QLD RTA", Detail = "Test 12 Detail", ImageSource = "" },
                 new Institute { Id = 3, Name = "TAS RTA", Detail = "Test 13 Detail", ImageSource = "" }
             };
-        } 
+        }
 
         public IEnumerable<Institute> GetAll()
         {

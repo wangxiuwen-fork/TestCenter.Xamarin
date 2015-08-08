@@ -7,7 +7,7 @@ namespace TestCenter.WinPhone
 	/// </summary>
 	public class LocalizedStrings
 	{
-		private static AppResources _localizedResources = new AppResources();
+		readonly static AppResources _localizedResources = new AppResources();
 
 		public AppResources LocalizedResources { get { return _localizedResources; } }
 	}

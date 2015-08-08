@@ -17,7 +17,7 @@ namespace TestCenter.Bootstrapping
                 .As<Navigator>()
                 .SingleInstance();
 
-            builder.Register<INavigation>(context => App.Current.MainPage.Navigation)
+            builder.Register<INavigation>(context => Application.Current.MainPage.Navigation)
                 .SingleInstance();
         }
     }

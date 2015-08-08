@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using TestCenter.Model;
+﻿using System.Collections.Generic;
 
 namespace TestCenter.ViewModels
 {

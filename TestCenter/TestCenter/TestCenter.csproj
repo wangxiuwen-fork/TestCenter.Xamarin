@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
@@ -73,27 +73,27 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\TestCenter.Config\TestCenter.Config.csproj">
-      <Project>{d935b01e-17f0-4ea2-8f8a-7a7b1ec18bdc}</Project>
+      <Project>{D935B01E-17F0-4EA2-8F8A-7A7B1EC18BDC}</Project>
       <Name>TestCenter.Config</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\TestCenter.Data\TestCenter.Data.csproj">
-      <Project>{ce7b29d8-7d59-4576-b3fd-cc9080bc45c2}</Project>
+      <Project>{CE7B29D8-7D59-4576-B3FD-CC9080BC45C2}</Project>
       <Name>TestCenter.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\TestCenter.FakeData\TestCenter.FakeData.csproj">
-      <Project>{4575a220-d469-4369-836f-c8b22682aa22}</Project>
+      <Project>{4575A220-D469-4369-836F-C8B22682AA22}</Project>
       <Name>TestCenter.FakeData</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\TestCenter.FakeServices\TestCenter.FakeServices.csproj">
-      <Project>{70bb04f3-7a76-44f7-8167-4749515614b1}</Project>
+      <Project>{70BB04F3-7A76-44F7-8167-4749515614B1}</Project>
       <Name>TestCenter.FakeServices</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\TestCenter.Model\TestCenter.Model.csproj">
-      <Project>{16f57b3c-848c-4bf8-8619-01561455ae35}</Project>
+      <Project>{16F57B3C-848C-4BF8-8619-01561455AE35}</Project>
       <Name>TestCenter.Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\TestCenter.Services\TestCenter.Services.csproj">
-      <Project>{9b29f9fc-b3cd-4dbe-a2c6-faab72b32197}</Project>
+      <Project>{9B29F9FC-B3CD-4DBE-A2C6-FAAB72B32197}</Project>
       <Name>TestCenter.Services</Name>
     </ProjectReference>
   </ItemGroup>
@@ -104,25 +104,20 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da">
       <HintPath>..\..\packages\Autofac.3.5.2\lib\portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Autofac.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="AutoMapper, Version=3.3.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+    <Reference Include="AutoMapper, Version=3.3.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005">
       <HintPath>..\..\packages\AutoMapper.3.3.1\lib\portable-windows8+net40+wp8+sl5+MonoAndroid+MonoTouch\AutoMapper.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.Forms.Core, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.Forms.Core, Version=1.4.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\packages\Xamarin.Forms.1.4.3.6376\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\packages\Xamarin.Forms.1.4.3.6376\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.Forms.Xaml, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.Forms.Xaml, Version=1.4.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\packages\Xamarin.Forms.1.4.3.6376\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
-      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>

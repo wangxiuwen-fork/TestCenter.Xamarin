@@ -28,5 +28,10 @@ namespace TestCenter.FakeData
         {
             return Tests.FirstOrDefault(t => t.Id == id);
         }
+
+        public IEnumerable<Test> GetByCourseId(int id)
+        {
+            return Tests.Where(t => t.CourseId == id);
+        }
     }
 }

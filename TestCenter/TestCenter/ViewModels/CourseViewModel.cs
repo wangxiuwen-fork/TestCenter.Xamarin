@@ -43,12 +43,13 @@ namespace TestCenter.ViewModels
 
         void ShowCourseDetails()
         {
-            AppNavigator.PushAsync<CourseDetailsViewModel>(viewModel => {
+            AppNavigator.PushAsync<CourseDetailsViewModel>(viewModel =>
+            {
                 viewModel.Id = Id;
                 viewModel.InstituteId = InstituteId;
                 viewModel.Name = Name;
                 viewModel.Detail = Detail;
-                viewModel.Tests = TestsService.GetAll().Select(t => TestViewModelFactory(t));
+                viewModel.Tests = TestsService.GetByCourse(Id).Select(t => TestViewModelFactory(t));
             });
         }
     }

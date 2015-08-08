@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using TestCenter.Services;
-using System.Linq;
-using TestCenter.Model;
+﻿using System.Collections.Generic;
 using TestCenter.Localization;
 
 namespace TestCenter.ViewModels
