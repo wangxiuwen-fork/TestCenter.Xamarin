@@ -25,6 +25,7 @@ namespace TestCenter
             builder.RegisterType<InstitutesView>().SingleInstance();
             builder.RegisterType<CoursesView>().SingleInstance();
             builder.RegisterType<CourseDetailsView>().SingleInstance();
+            builder.RegisterType<TestDetailsView>().SingleInstance();
         }
 
         static void RegisterViewModels(ContainerBuilder builder)
@@ -36,6 +37,7 @@ namespace TestCenter
             builder.RegisterType<CoursesViewModel>();
             builder.RegisterType<TestsViewModel>();
             builder.RegisterType<TestViewModel>();
+            builder.RegisterType<TestDetailsViewModel>();
         }
 
         static void RegisterBusinessServices(ContainerBuilder builder)

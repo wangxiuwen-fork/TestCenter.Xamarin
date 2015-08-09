@@ -7,21 +7,21 @@ namespace TestCenter.FakeServices
 {
     public class FakeInstituteService : InstituteService
     {
-        readonly InstituteDataService PublisherDataService;
+        readonly InstituteDataService DataService;
 
-        public FakeInstituteService()
+        public FakeInstituteService(InstituteDataService dataService)
         {
-            PublisherDataService = new FakeData.FakeInstituteDataService();
+            DataService = dataService;
         }
 
         public IEnumerable<Institute> GetAllPublishers()
         {
-            return PublisherDataService.GetAll();
+            return DataService.GetAll();
         }
 
         public Institute GetById(int id)
         {
-            return PublisherDataService.GetById(id);
+            return DataService.GetById(id);
         }
     }
 }

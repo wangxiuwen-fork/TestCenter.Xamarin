@@ -26,7 +26,7 @@ namespace TestCenter
             viewFactory.Register<InstitutesViewModel, InstitutesView>();
             viewFactory.Register<CoursesViewModel, CoursesView>();
             viewFactory.Register<CourseDetailsViewModel, CourseDetailsView>();
-            viewFactory.Register<CourseDetailsViewModel, CourseDetailsView>();
+            viewFactory.Register<TestDetailsViewModel, TestDetailsView>();
         }
 
         protected override void ConfigureApplication(IContainer container)

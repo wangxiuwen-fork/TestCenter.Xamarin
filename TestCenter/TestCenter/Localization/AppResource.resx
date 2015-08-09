@@ -120,6 +120,9 @@
   <data name="AppName" xml:space="preserve">
     <value>Test Center</value>
   </data>
+  <data name="AvailableTest" xml:space="preserve">
+    <value>Available Test</value>
+  </data>
   <data name="Course" xml:space="preserve">
     <value>Course</value>
   </data>

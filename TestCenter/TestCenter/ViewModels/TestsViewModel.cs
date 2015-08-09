@@ -8,7 +8,7 @@ namespace TestCenter.ViewModels
         {
             get
             {
-                return "Available Tests";
+                return Localization.AppResource.AvailableTest;
             }
         }
 

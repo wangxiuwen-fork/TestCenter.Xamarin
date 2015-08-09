@@ -1,9 +1,10 @@
-using TestCenter.Views.CustomComponets;
 using TestCenter.iOS.CustomComponents;
-using Xamarin.Forms;
+using TestCenter.Views.CustomComponets;
 using UIKit;
+using Xamarin.Forms;
 
 [assembly: ExportRenderer(typeof(TextCellExtended), typeof(DiscolosureTextCellRenderer))]
+
 namespace TestCenter.iOS.CustomComponents
 {
     public class DiscolosureTextCellRenderer : Xamarin.Forms.Platform.iOS.TextCellRenderer

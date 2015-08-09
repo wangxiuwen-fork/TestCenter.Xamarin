@@ -6,10 +6,7 @@ namespace TestCenter.ViewModels
     {
         public new string Title
         {
-            get
-            {
-                return Name;
-            }
+            get { return Name; }
         }
 
         public int Id { get; set; }

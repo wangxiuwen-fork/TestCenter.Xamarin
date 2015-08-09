@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
+using TestCenter.Data;
 
 namespace TestCenter.Services.UnitTest
 {
@@ -7,10 +8,12 @@ namespace TestCenter.Services.UnitTest
     public class InstituteServiceUnitTest
     {
         readonly InstituteService InstituteService;
+        readonly InstituteDataService InstituteDataService;
 
         public InstituteServiceUnitTest()
         {
-            InstituteService = new FakeServices.FakeInstituteService();
+            InstituteDataService = new FakeData.FakeInstituteDataService();
+            InstituteService = new FakeServices.FakeInstituteService(InstituteDataService);
         }
 
         [TestMethod]
@@ -23,9 +26,7 @@ namespace TestCenter.Services.UnitTest
         [TestMethod]
         public void GetPublisherById()
         {
-            var id = 1;
-            var publisher = InstituteService.GetById(id);
-            Assert.IsNotNull(publisher);
+            Assert.IsNotNull(InstituteService.GetById(1));
         }
     }
 }

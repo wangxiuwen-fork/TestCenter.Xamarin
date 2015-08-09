@@ -14,7 +14,8 @@
                 <DataTemplate>
                     <cv:TextCellExtended
                         Text="{Binding Name}" Detail="{Binding Detail}"
-                        ShowDisclosure="True" />
+                        ShowDisclosure="True" 
+                        Command="{Binding ShowTestDetailsCommand}"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

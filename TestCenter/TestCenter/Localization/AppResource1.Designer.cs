@@ -71,6 +71,15 @@ namespace TestCenter.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Available Test.
+        /// </summary>
+        internal static string AvailableTest {
+            get {
+                return ResourceManager.GetString("AvailableTest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Course.
         /// </summary>
         internal static string Course {

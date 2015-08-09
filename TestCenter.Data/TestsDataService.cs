@@ -5,6 +5,6 @@ namespace TestCenter.Data
 {
     public interface TestsDataService : RepositoryBase<Test>
     {
-        IEnumerable<Test> GetByCourseId(int id);
+        IEnumerable<Test> GetByCourse(int id);
     }
 }

@@ -1,11 +1,11 @@
 ﻿using TestCenter.ViewModels;
 using Xamarin.Forms;
 
-namespace TestCenter
+namespace TestCenter.Views
 {
-    public partial class InstitutesView : ContentPage
+    public partial class TestDetailsView : ContentPage
     {
-        public InstitutesView(InstitutesViewModel viewModel)
+        public TestDetailsView(TestDetailsViewModel viewModel)
         {
             InitializeComponent();
 

@@ -35,9 +35,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Answer.cs" />
     <Compile Include="Course.cs" />
     <Compile Include="EntityBase.cs" />
     <Compile Include="Institute.cs" />
+    <Compile Include="Instruction.cs" />
+    <Compile Include="Question.cs" />
     <Compile Include="Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
