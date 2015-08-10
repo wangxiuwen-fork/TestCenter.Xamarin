@@ -4,54 +4,23 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="TestCenter.Views.TestDetailsView"
     xmlns:cv="clr-namespace:TestCenter.Views.CustomComponets;assembly=TestCenter"
+    xmlns:local="clr-namespace:TestCenter;assembly=TestCenter"
     Title="{Binding Title}">
-    <!--<RelativeLayout>
-        <StackLayout>
-            <Label Text="{Binding Name}" />
-            <Label Text="{Binding Detail}" />
-            <Button 
-                Text="{Binding Name}" 
-                HeightRequest="50"
-                BorderWidth="3"/>
-        </StackLayout>
-        <BoxView Color="Blue"
-            RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
-            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-40}" 
-            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
-            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.33}">
-        </BoxView>
-    </RelativeLayout>
-</ContentPage>-->
-
-    <ContentPage.Padding>
-        <OnPlatform x:TypeArguments="Thickness"
-            iOS="0, 20, 0, 0" />
-    </ContentPage.Padding>
-
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="50" />
-        </Grid.RowDefinitions>
-
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-
-        <Label Text="Autosized cell"
-           Grid.Row="0" Grid.Column="0"
-           TextColor="White"
-           BackgroundColor="Blue" />
-
-        <BoxView Color="Teal"
-            Grid.Row="1" Grid.Column="0" />
-        
-        <Label Text="Span two columns"
-           Grid.Row="2" Grid.Column="0"
-           TextColor="Blue"
-           BackgroundColor="Yellow"
-           XAlign="Center"
-           YAlign="Center" />
-    </Grid>
+    <StackLayout>
+        <Label Text="{Binding Name}" HeightRequest="20"/>
+        <Label Text="{Binding Detail}" HeightRequest="50"/>
+        <ScrollView>
+            <ListView ItemsSource="{Binding Instructions}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <cv:TextCellExtended 
+                            Text="{Binding Text}"
+                            Detail="{Binding Detail}"
+                            ShowDisclosure="False"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollView>
+        <Button HeightRequest="50" Text="Start Test"></Button>
+    </StackLayout>
 </ContentPage>

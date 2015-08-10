@@ -16,13 +16,14 @@ namespace TestCenter.ViewModels
         readonly Navigator AppNavigator;
         readonly TestsService TestsService;
 
-        public TestViewModel(Test test, Navigator navigator)
+        public TestViewModel(Test test, Navigator navigator, TestsService service)
         {
+            AppNavigator = navigator;
+            TestsService = service;
+
             Id = test.Id;
             Name = test.Name;
             Detail = test.Detail;
-
-            AppNavigator = navigator;
             ShowTestDetailsCommand = new Command(ShowTestDetails);
         }
 
@@ -33,6 +34,7 @@ namespace TestCenter.ViewModels
                 viewModel.Id = Id;
                 viewModel.Name = Name;
                 viewModel.Detail = Detail;
+                viewModel.Instructions = TestsService.GetById(Id).Instructions;
             });
         }
     }
