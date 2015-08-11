@@ -12,7 +12,7 @@ namespace TestCenter.ViewModels
         readonly CoursesService Service;
         readonly TestsService TestsService;
         readonly Navigator AppNavigator;
-        readonly Func<Test, TestViewModel> TestViewModelFactory;
+        readonly Func<Test, TestsListItemViewModel> TestViewModelFactory;
 
         public int Id { get; set; }
         public int InstituteId { get; set; }
@@ -21,7 +21,7 @@ namespace TestCenter.ViewModels
 
         public ICommand ShowCourseDetailCommand { get; set; }
 
-        public CourseViewModel(Course course, Navigator navigator, CoursesService service, TestsService testsService, Func<Test, TestViewModel> testViewModelFactory)
+        public CourseViewModel(Course course, Navigator navigator, CoursesService service, TestsService testsService, Func<Test, TestsListItemViewModel> testViewModelFactory)
         {
             Service = service;
             TestsService = testsService;

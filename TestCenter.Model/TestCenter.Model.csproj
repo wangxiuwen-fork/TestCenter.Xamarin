@@ -41,6 +41,7 @@
     <Compile Include="Institute.cs" />
     <Compile Include="Instruction.cs" />
     <Compile Include="Question.cs" />
+    <Compile Include="Section.cs" />
     <Compile Include="Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

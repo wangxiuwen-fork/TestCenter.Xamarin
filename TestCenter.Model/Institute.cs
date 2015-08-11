@@ -6,7 +6,8 @@ namespace TestCenter.Model
     {
         public string Name { get; set; }
         public string Detail { get; set; }
-        public string ImageSource { get; set; }
+        public string LogoImageSource { get; set; }
+        public string WelcomeMessage { get; set; }
         public IEnumerable<Course> Courses { get; set; }
     }
 }

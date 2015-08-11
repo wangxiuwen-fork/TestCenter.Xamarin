@@ -12,6 +12,6 @@ namespace TestCenter.ViewModels
             }
         }
 
-        public IEnumerable<TestViewModel> AvailableTests { get; set; }
+        public IEnumerable<TestsListItemViewModel> AvailableTests { get; set; }
     }
 }

@@ -114,5 +114,14 @@ namespace TestCenter.Localization {
                 return ResourceManager.GetString("Institutes", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start.
+        /// </summary>
+        internal static string Start {
+            get {
+                return ResourceManager.GetString("Start", resourceCulture);
+            }
+        }
     }
 }

@@ -8,19 +8,22 @@
     Title="{Binding Title}">
     <StackLayout>
         <Label Text="{Binding Name}" HeightRequest="20"/>
-        <Label Text="{Binding Detail}" HeightRequest="50"/>
+        <StackLayout Padding="5, 5, 5, 5" HorizontalOptions="StartAndExpand" Orientation="Vertical">
+            <Label Text="{Binding Detail}" HeightRequest="50"/>
+        </StackLayout>
         <ScrollView>
-            <ListView ItemsSource="{Binding Instructions}">
+            <ListView ItemsSource="{Binding Instructions}" HasUnevenRows="true">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <cv:TextCellExtended 
-                            Text="{Binding Text}"
-                            Detail="{Binding Detail}"
-                            ShowDisclosure="False"/>
+                        <ViewCell>
+                            <StackLayout Padding="5, 5, 5, 5" HorizontalOptions="StartAndExpand" Orientation="Vertical">
+                                <Label Text="{Binding Text}" YAlign="Center" FontSize="Small" />
+                            </StackLayout>
+                        </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
         </ScrollView>
-        <Button HeightRequest="50" Text="Start Test"></Button>
+        <Button HeightRequest="50" Text="Start Test" Command="{Binding StartTestCommand}"></Button>
     </StackLayout>
 </ContentPage>

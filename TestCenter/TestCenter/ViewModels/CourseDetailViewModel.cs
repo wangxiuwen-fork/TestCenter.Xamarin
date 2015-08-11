@@ -13,6 +13,6 @@ namespace TestCenter.ViewModels
         public int InstituteId { get; set; }
         public string Name { get; set; }
         public string Detail { get; set; }
-        public IEnumerable<TestViewModel> Tests { get; set; }
+        public IEnumerable<TestsListItemViewModel> Tests { get; set; }
     }
 }
