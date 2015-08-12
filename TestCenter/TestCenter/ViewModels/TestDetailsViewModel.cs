@@ -27,10 +27,13 @@ namespace TestCenter.ViewModels
 
         void StartTest()
         {
+            var test = TestsService.GetById(Id);
             AppNavigator.PushAsync<TestViewModel>(viewModel =>
             {
                 viewModel.Id = Id;
                 viewModel.Title = Name;
+                viewModel.PreTestQuestions = test.PreTestQuestions;
+                viewModel.Questions = test.Questions;
             });
         }
     }
