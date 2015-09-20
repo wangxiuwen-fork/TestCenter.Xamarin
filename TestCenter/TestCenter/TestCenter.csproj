@@ -48,7 +48,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AppNavigator.cs" />
     <Compile Include="Services\Navigator.cs" />
-    <Compile Include="ViewModels\CourseDetailViewModel.cs" />
+    <Compile Include="ViewModels\CourseDetailsViewModel.cs" />
     <Compile Include="ViewModels\CoursesViewModel.cs" />
     <Compile Include="ViewModels\CourseViewModel.cs" />
     <Compile Include="ViewModels\InstitutesViewModel.cs" />
