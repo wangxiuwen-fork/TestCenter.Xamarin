@@ -3,9 +3,9 @@ using Xamarin.Forms;
 
 namespace TestCenter
 {
-    public partial class TestView : CarouselPage
+    public partial class QuestionView : ContentPage
     {
-        public TestView(TestViewModel viewModel)
+        public QuestionView(TestViewModel viewModel)
         {
             InitializeComponent();
 

@@ -1,19 +1,30 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage
+<CarouselPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="TestCenter.TestView"
     xmlns:cv="clr-namespace:TestCenter.Views.CustomComponets;assembly=TestCenter"
-    Title="{Binding Title}">
-    <ListView ItemsSource="{Binding Institutes}">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <cv:TextCellExtended Text="{Binding Name}"
-                                     Detail="{Binding Detail}"
-                                     ShowDisclosure="True"
-                                     Command="{Binding ShowCoursesCommand}" />
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
-</ContentPage>
-    
+    ItemsSource="{Binding PreTestQuestions}">
+    <CarouselPage.ItemTemplate>
+        <DataTemplate>
+            <ContentPage>
+                <StackLayout>
+                    <Label Text="{Binding Text}" />
+                    <ScrollView>
+                        <ListView ItemsSource="{Binding Answers}" HasUnevenRows="true">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <StackLayout Padding="5, 5, 5, 5" HorizontalOptions="StartAndExpand" Orientation="Vertical">
+                                            <Label Text="{Binding Value}" YAlign="Center" FontSize="Small" />
+                                        </StackLayout>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </ScrollView>
+                </StackLayout>
+            </ContentPage>
+        </DataTemplate>
+    </CarouselPage.ItemTemplate>
+</CarouselPage>
