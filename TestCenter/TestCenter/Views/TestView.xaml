@@ -23,6 +23,9 @@
                             </ListView.ItemTemplate>
                         </ListView>
                     </ScrollView>
+                    <ScrollView HeightRequest="100">
+                        <Button Text="Start Test" Command="{Binding StartTestCommand}"></Button>
+                    </ScrollView>
                 </StackLayout>
             </ContentPage>
         </DataTemplate>

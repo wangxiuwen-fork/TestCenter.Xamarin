@@ -7,7 +7,7 @@ namespace TestCenter
     {
         public QuestionView(TestViewModel viewModel)
         {
-            InitializeComponent();
+            //InitializeComponent();
 
             BindingContext = viewModel;
         }

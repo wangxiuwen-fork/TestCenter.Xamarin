@@ -17,7 +17,7 @@ namespace TestCenter.ViewModels
         readonly CoursesService CoursesService;
         readonly Navigator AppNavigator;
         readonly Func<Course, CourseViewModel> CourseViewModelFactory;
-        
+
         public InstituteViewModel(Institute institute, CoursesService coursesService, Navigator navigator, Func<Course, CourseViewModel> courseViewModelFactory)
         {
             CoursesService = coursesService;
